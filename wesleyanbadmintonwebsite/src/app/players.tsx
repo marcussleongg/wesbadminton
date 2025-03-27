@@ -19,14 +19,14 @@ function Avatar({ personName, size} : { personName: string, size: number }) {
     )
 }
 
-function Profile({ personName, latestMatchesList } : { personName: string, latestMatchesList: Match[] }) {
+function Profile({ personName, grade, latestMatchesList } : { personName: string, grade: string, latestMatchesList: Match[] }) {
     return (
         <>
             <Avatar 
                 personName={personName}
                 size={100}
             />
-            <h2>{personName}</h2>
+            <h2><span style={{ fontWeight: 'bold' }}>{personName}</span> {grade}</h2>
                 { latestMatchesList.length > 0 ? (
                     latestMatchesList.map((match,index) => {
                         const [opponent, score] = Object.entries(match)[0];
@@ -40,13 +40,14 @@ function Profile({ personName, latestMatchesList } : { personName: string, lates
 }
 
 export default function Gallery() {
-    const playerItems = playersData.map(player => 
+    const playersSortedByElo = playersData.sort((a, b) => b.elo - a.elo);
+    const playerItems = playersSortedByElo.map(player => 
         <div key={player.id}>
-            <Profile personName={player.fullName} latestMatchesList={player.latestMatches} />
+            <Profile personName={player.fullName} grade={player.grade} latestMatchesList={player.latestMatches} />
         </div>);
     return (
         <section>
-            <h1>Players</h1>
+            <h1 style={{ fontWeight: 'bold', fontSize: '3rem' }}>Players</h1>
             <ul>{playerItems}</ul>
 
         </section>
