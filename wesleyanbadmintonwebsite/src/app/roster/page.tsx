@@ -7,7 +7,7 @@ export default function Home() {
       <main className="flex flex-col gap-[32px] row-start-2 w-full max-w-full">
         <Link
           href="/"
-          className="sticky top-4 left-4 text-gray-100 hover:text-gray-400 inline-block z-10 text-2xl"
+          className="sticky top-4 left-4 text-gray-100 hover:text-gray-4git00 inline-block z-10 text-2xl"
         >
           ←
         </Link>
