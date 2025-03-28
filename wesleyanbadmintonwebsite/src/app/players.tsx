@@ -46,30 +46,25 @@ function Profile({ personName, grade, /* latestMatchesList */ } : { personName: 
 
 export default function Gallery() {
     const playersSortedByElo = playersData.sort((a, b) => b.elo - a.elo);
-    
+  
     return (
-        <section className="w-full max-w-full px-24 sm:px-32 md:px-48 lg:px-64 xl:px-80">
-            <h1 className="text-5xl font-bold mb-12">Players</h1>
-            <div className="space-y-4">
-                {playersSortedByElo.map(player => (
-                    <div 
-                        key={player.id} 
-                        className="w-full flex items-center justify-between space-x-6 p-4 border-b"
-                    >
-                        <div className="flex-grow overflow-hidden">
-                            <Profile 
-                                personName={player.fullName} 
-                                grade={player.grade} 
-                            />
-                        </div>
-                        <div className="text-right">
-                            {/* Additional content goes here */}
-                            <h4 className="text-gray-100 font-bold text-2xl">{player.elo}</h4>
-                            {/* You can add more details about the player here */}
-                        </div>
-                    </div>
-                ))}
+      <section className="w-full px-4 sm:px-8">
+        <h1 className="text-3xl sm:text-5xl font-bold mb-6 text-center">Players</h1>
+        <div className="space-y-4">
+          {playersSortedByElo.map((player) => (
+            <div
+              key={player.id}
+              className="w-full flex items-center justify-between space-x-4 sm:space-x-6 p-4 border-b overflow-hidden"
+            >
+              <div className="flex-grow overflow-hidden">
+                <Profile personName={player.fullName} grade={player.grade} />
+              </div>
+              <div className="text-right whitespace-nowrap">
+                <h4 className="text-gray-100 font-bold text-xl">{player.elo}</h4>
+              </div>
             </div>
-        </section>
+          ))}
+        </div>
+      </section>
     );
-}
+}  
