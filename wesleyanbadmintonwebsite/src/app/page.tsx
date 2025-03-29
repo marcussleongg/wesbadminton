@@ -3,12 +3,17 @@ import Image from "next/image";
 export default function Home() {
   return (
     <div className="flex flex-col items-center justify-between h-screen max-h-screen overflow-hidden p-2 sm:p-4 font-[family-name:var(--font-geist-sans)]">
-      <header className="w-full mt-4 sm:mt-6">
-        <h1 className="text-center">
-          <span className="text-red-400 font-extrabold text-2xl sm:text-4xl">Wesleyan University</span> 
-          <span className="block text-sm sm:text-lg text-gray-200 font-medium mt-1 sm:mt-2">Competitive Club Badminton</span>
-        </h1>
-      </header>
+      <header className="w-full mt-8 flex items-center justify-center">
+  <h1>
+    <Image
+      src="/images/clubbadge.png"
+      alt="Club badge"
+      width={125}
+      height={125}
+    />
+  </h1>
+</header>
+
       
       {/* Reduced flex-grow for smaller screens */}
       <div className="flex-grow-0 sm:flex-grow"></div>
