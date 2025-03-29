@@ -94,7 +94,7 @@ export const playersData : Player[] = [
     latestMatches: [],
 }, {
     id: 12,
-    fullName: "Eleana",
+    fullName: "Elena",
     grade: "2028",
     elo: 0,
     latestMatches: [],

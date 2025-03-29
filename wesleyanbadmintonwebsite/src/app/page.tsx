@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-between h-screen max-h-screen overflow-hidden p-2 sm:p-4 font-[family-name:var(--font-geist-sans)]">
+    <div className="flex flex-col items-center justify-between h-screen max-height-100vh overflow-auto p-2 sm:p-4 font-[family-name:var(--font-geist-sans)]">
       <header className="w-full mt-8 flex items-center justify-center">
   <h1>
     <Image
