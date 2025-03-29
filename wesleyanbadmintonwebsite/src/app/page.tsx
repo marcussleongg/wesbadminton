@@ -2,21 +2,17 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-between h-screen max-height-100vh overflow-auto p-2 sm:p-4 font-[family-name:var(--font-geist-sans)]">
-      <header className="w-full mt-8 flex items-center justify-center">
-  <h1>
-    <Image
-      src="/images/clubbadge.png"
-      alt="Club badge"
-      width={125}
-      height={125}
-    />
-  </h1>
-</header>
-
-      
-      {/* Reduced flex-grow for smaller screens */}
-      <div className="flex-grow-0 sm:flex-grow"></div>
+    <div className="flex flex-col items-center justify-around h-screen max-height-100vh overflow-auto p-2 sm:p-4 font-[family-name:var(--font-geist-sans)]">
+      <header className="w-full mt-15 mb-2 sm:mt-8 flex items-center justify-center">
+        <h1>
+          <Image
+            src="/images/clubbadge.png"
+            alt="Club badge"
+            width={125}
+            height={125}
+          />
+        </h1>
+      </header>
       
       <main className="flex flex-col items-center justify-center w-full">
           <Image
@@ -28,8 +24,7 @@ export default function Home() {
             priority
           />
 
-        {/* Reduced margin-top on mobile */}
-        <div className="mt-4 sm:mt-8">
+        <div className="mt-8">
           <a
             className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-xs sm:text-sm h-8 sm:h-10 px-3 sm:px-4"
             href="/roster"
