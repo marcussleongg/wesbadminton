@@ -32,7 +32,7 @@ export const playersData : Player[] = [
 }, {
     id: 2,
     fullName: "Xiran",
-    grade: "GRAD",
+    grade: "2023",
     elo: 1500,
     latestMatches: [
         { "Kevin Zhao": 21 },
@@ -94,18 +94,24 @@ export const playersData : Player[] = [
     latestMatches: [],
 }, {
     id: 12,
-    fullName: "Virgil",
+    fullName: "Eleana",
     grade: "2028",
     elo: 0,
     latestMatches: [],
 }, {
     id: 13,
-    fullName: "Duy",
+    fullName: "Virgil",
     grade: "2028",
     elo: 0,
     latestMatches: [],
 }, {
     id: 14,
+    fullName: "Duy",
+    grade: "2028",
+    elo: 0,
+    latestMatches: [],
+}, {
+    id: 15,
     fullName: "Marcus",
     grade: "2028",
     elo: 0,

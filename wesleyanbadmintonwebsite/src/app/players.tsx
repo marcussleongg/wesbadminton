@@ -49,7 +49,6 @@ export default function Gallery() {
   
     return (
       <section className="w-full px-4 sm:px-8">
-        <h1 className="text-3xl sm:text-5xl font-bold mb-6 text-center">Players</h1>
         <div className="space-y-4">
           {playersSortedByElo.map((player) => (
             <div
@@ -60,7 +59,7 @@ export default function Gallery() {
                 <Profile personName={player.fullName} grade={player.grade} />
               </div>
               <div className="text-right whitespace-nowrap">
-                <h4 className="text-gray-100 font-bold text-xl">{player.elo}</h4>
+                <h4 className="text-gray-100 font-bold text-xl">{player.elo === 0 ? "N/A" : player.elo}</h4>
               </div>
             </div>
           ))}
