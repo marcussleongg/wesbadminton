@@ -35,7 +35,7 @@ export default function Home() {
               width={14}
               height={14}
             />
-            View roster standings
+            View standings
             <Image
               className="dark:invert rotate-180"
               src="/vercel.svg"
