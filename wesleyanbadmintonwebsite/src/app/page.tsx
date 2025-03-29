@@ -10,8 +10,10 @@ export default function Home() {
         </h1>
       </header>
       
-      {/* Main content should not grow or shrink */}
-      <main className="flex flex-col items-center justify-center w-full h-full flex-shrink-0 overflow-hidden">
+      {/* Reduced flex-grow for smaller screens */}
+      <div className="flex-grow-0 sm:flex-grow"></div>
+      
+      <main className="flex flex-col items-center justify-center w-full">
           <Image
             src="/images/teamphoto.jpeg"
             alt="Team photo"
@@ -35,7 +37,7 @@ export default function Home() {
               width={14}
               height={14}
             />
-            View standings
+            View roster standings
             <Image
               className="dark:invert rotate-180"
               src="/vercel.svg"
@@ -47,7 +49,9 @@ export default function Home() {
         </div>
       </main>
       
-      {/* Footer */}
+      {/* Reduced flex-grow for smaller screens */}
+      <div className="flex-grow-0 sm:flex-grow"></div>
+      
       <footer className="w-full flex justify-center pb-2 sm:pb-4">
         <a
           className="flex items-center gap-1 text-xs sm:text-sm hover:underline hover:underline-offset-4"
